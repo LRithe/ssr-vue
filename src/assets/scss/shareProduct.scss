@@ -1,0 +1,257 @@
+
+body {
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+.row, .row > div {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 60px 0 40px 0;
+}
+
+.disabled {
+  pointer-events: none;
+  &:hover, &:active {
+    background-color: white;
+  }
+  .glyphicon {
+    color: #d4d4d4;
+  }
+}
+
+#announce-text {
+  height: 210px;
+  line-height: 210px;
+  color: #ff5151;
+  font-size: 24px;
+  span {
+    position: relative;
+    top: 7px;
+  }
+}
+
+.participants-avatar {
+  margin-top: 20px;
+  position: relative;
+  height: 43px;
+  img {
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    border: 2px solid #fff;
+  }
+}
+
+#winning-record {
+  background-color: #f2f2f2;
+}
+
+#winning-record, #moments-part {
+  padding: 80px 0!important;
+  .record-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 0;
+    padding: 10px 0;
+  }
+
+  .main {
+    width: 100%;
+    min-height: 100px;
+    overflow: hidden;
+    background: #3ab981;
+    border-radius: 5px;
+    .row {
+      padding-left: 20px;
+      padding-right: 30px;
+    }
+  }
+
+  .record-content {
+    margin: 0 5px 5px 5px;
+    background: #fff;
+    ul {
+      margin-bottom: 0px;
+    }
+  }
+
+  .pagination > li > a {
+    color: #778595;
+    border-color: #f2f2f2;
+    padding: 9px 15px;
+    &:active, &:focus {
+      background-color: #fff;
+      color: #778595;
+    }
+    &:hover {
+      background-color: #3ab981;
+      color: white;
+    }
+  }
+
+  .pagination li.active a {
+    background-color: #3ab981;
+    color: white;
+  }
+
+  .record-avatar {
+    img {
+      width: 45px;
+      height: 45px;
+      margin: 5px 20px 0 0;
+    }
+  }
+
+  .record-text {
+    p {
+      max-width: 410px;
+      width: 80%;
+      color: #778595;
+      margin-bottom: 5px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      &:first-child {
+        span {
+          font-size: 18px;
+          color: #3ab981;
+        }
+        a {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+      &:last-child {
+        span {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .record-list {
+    font-size: 14px;
+    padding: 25px 0 15px 0;
+    &:nth-child(2n) {
+      background: #fafafa;
+    }
+  }
+
+  .record-time {
+    color: #778595;
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (min-width: 960px) {
+  .container {
+    max-width: 960px;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .main-phone {
+    display: none;
+  }
+
+  .main-pc {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  #left-trials #remaining-lottery-times span {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #download-part {
+    display: none;
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .main-phone {
+    display: block;
+  }
+
+  .main-pc {
+    display: none;
+  }
+
+  .download-btn .col-sm-6 {
+    text-align: center;
+  }
+
+  #winning-record, #moments-part {
+    .record-title {
+      font-size: 18px;
+      padding: 5px 0;
+    }
+    .record-list {
+      font-size: 12px;
+      .record-text p:first-child span, .record-time {
+        font-size: 12px;
+      }
+    }
+    .record-content {
+      margin: 0 3px 3px 3px;
+    }
+    .record-avatar img{
+      width: 30px;
+      height: 30px;
+      margin: 5px 10px 0 0;
+    }
+    .main .row {
+      padding: 0 0 0 2%;
+    }
+    .pagination > li > a {
+      &:hover {
+        background-color: #fff;
+        color: #778595;
+      }
+    }
+  }
+
+  #moments-part {
+    padding: 0 0 60px 0 !important;
+    .picture li > img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  #download-part {
+    padding: 10% 2%;
+    img {
+      width: 70%;
+    }
+    p:nth-child(2) {
+      font-size: 22px;
+    }
+  }
+
+  .participants-avatar img {
+    width: 35px;
+    height: 35px;
+  }
+}
