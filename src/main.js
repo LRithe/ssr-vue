@@ -4,6 +4,7 @@ import iView from 'iview';
 import {createStore} from './store'
 import {createRouter} from './router'
 import {sync} from 'vuex-router-sync'
+
 Vue.use(iView);
 
 export function createApp() {

@@ -15,9 +15,7 @@ const serverInfo =
 
 const app = express()
 
-const template = fs.readFileSync(resolve('./src/index.template.html'), 'utf-8')
-
-function createRenderer (bundle, options) {
+function createRenderer (bundle, template, options) {
   return createBundleRenderer(bundle, Object.assign(options, {
     template,
     cache: LRU({
@@ -32,14 +30,16 @@ function createRenderer (bundle, options) {
 let renderer
 let readyPromise
 if (isProd) {
+  const template = fs.readFileSync(resolve('./dist/index.html'), 'utf-8')
   const bundle = require('./dist/vue-ssr-server-bundle.json')
   const clientManifest = require('./dist/vue-ssr-client-manifest.json')
-  renderer = createRenderer(bundle, {
+  renderer = createRenderer(bundle, template, {
     clientManifest
   })
 } else {
+  const template = fs.readFileSync(resolve('./src/index.template.html'), 'utf-8')
   readyPromise = require('./build/setup-dev-server')(app, (bundle, options) => {
-    renderer = createRenderer(bundle, options)
+    renderer = createRenderer(bundle, template, options)
   })
 }
 

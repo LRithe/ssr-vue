@@ -4,7 +4,7 @@ const MFS = require('memory-fs')
 const config = require('../config')
 const clientConfig = require('./webpack.client.config')
 const serverConfig = require('./webpack.server.config')
-let proxyMiddleware = require('http-proxy-middleware')
+const proxyMiddleware = require('http-proxy-middleware')
 let proxyTable = config.dev.proxyTable
 
 const readFile = (fs, file) => {
