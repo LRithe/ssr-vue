@@ -4,7 +4,6 @@ import Router from 'vue-router'
 // const createListView = id => () => import('@/views/CreateListView').then(m => m.default(id))
 // const Hello = () => import('@/components/Hello')
 import Hello from '@/components/Hello'
-// import Test from '@/views/Test'
 import {createListView} from '@/views/CreateListView'
 import Book from '@/views/Book.vue'
 
@@ -19,11 +18,6 @@ export function createRouter () {
         name: 'Hello',
         component: Hello
       },
-      // {
-      //   path: '/test',
-      //   name: 'Test',
-      //   component: Test
-      // },
       {
         path: '/technology/:page(\\d+)?',
         name: 'technology',
