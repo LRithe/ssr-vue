@@ -14,7 +14,7 @@
         </div>
         <Row class="tag">
             <Col span="6">
-            <Tag type="dot" color="green">{{keyword | upperCase(keyword)}}</Tag>
+            <Tag type="dot" color="green">{{keyword|upperCase(keyword)}}</Tag>
             </COl>
         </Row>
         <Row v-for="book in books" :key="book.id" class="book-list" v-if="!!book" type="flex" algin="middle" justify="center">
